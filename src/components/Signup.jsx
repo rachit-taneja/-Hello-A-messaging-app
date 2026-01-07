@@ -1,12 +1,26 @@
 import React from 'react'
-import { FaUser ,FaKey } from 'react-icons/fa'
+import { FaUser ,FaKey } from 'react-icons/fa';
+import { CiMail } from "react-icons/ci";
+
 const Signup = () => {
   return (<div className='justify-center items-center flex p-6 min-h-screen'>
    
-    <div className='max-w-[40rem] flex flex-col gap-5 w-90 m-full p-10 rounded-lg bg-base-200'>
-        <h1 className='flex justify-center items-center text-xl'>Signup..!!!!</h1>
+    <div className='max-w-[40rem] flex flex-col gap-5 w-90 m-full p-10 rounded-lg bg-base-200 w-full'>
+        <h1 className=' text-xl'>Please Signup..!!!!</h1>
+        <label className="input w-full">
+  <FaUser/>
+  <input
+    type="text"
+    required
+    placeholder="Name"
+    pattern="[A-Za-z][A-Za-z0-9\-]*"
+    minlength="3"
+    maxlength="30"
+    title="Only letters, numbers or dash"
+  />
+    </label>
   {/* Username */}
-  <label className="input ">
+    <label className="input w-full">
   <FaUser/>
   <input
     type="text"
@@ -18,9 +32,23 @@ const Signup = () => {
     title="Only letters, numbers or dash"
   />
     </label>
+
+  {/* Email*/}
+  <label className="input w-full">
+  <CiMail/>
+  <input
+    type="email"
+    required
+    placeholder="Email"
+    pattern="[A-Za-z][A-Za-z0-9\-]*"
+    minlength="3"
+    maxlength="30"
+    title="Only letters, numbers or dash"
+  />
+    </label>
     
 {/* PassWord */}
-<label className="input ">
+<label className="input w-full">
     <FaKey/>
   <input
     type="password"
@@ -31,7 +59,8 @@ const Signup = () => {
     title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
   />
 </label>
-<label className="input ">
+{/* Confirm Password */}
+<label className="input w-full">
     <FaKey/>
   <input
     type="password"

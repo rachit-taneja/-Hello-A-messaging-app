@@ -1,12 +1,12 @@
 import React from 'react'
 import { FaUser ,FaKey } from 'react-icons/fa'
 const Login = () => {
-  return (<div className='justify-center items-center flex p-6 min-h-screen'>
+  return (<div className='justify-center items-center flex p-6 min-h-screen '>
    
-    <div className='max-w-[40rem] flex flex-col gap-5 m-full p-10 rounded-lg bg-base-200'>
-        <h1 className='flex justify-center items-center text-xl'>Login...!!!!</h1>
+    <div className='max-w-[40rem] flex flex-col gap-5 m-full p-10 w-[40rem] rounded-lg bg-base-200  '>
+        <h1 className=' text-xl'>Please Login...!!!!</h1>
   {/* Username */}
-  <label className="input ">
+  <label className="input  w-full ">
   <FaUser/>
   <input
     type="text"
@@ -20,7 +20,7 @@ const Login = () => {
     </label>
    
 {/* PassWord */}
-<label className="input ">
+<label className="input w-full ">
     <FaKey/>
   <input
     type="password"
