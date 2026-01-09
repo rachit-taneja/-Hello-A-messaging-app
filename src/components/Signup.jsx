@@ -4,6 +4,21 @@ import { CiMail } from "react-icons/ci";
 
 const Signup = () => {
 
+  const[SignupData,setSignupData]=React.useState({
+    name:"",
+    username:"",
+    email:"",
+    password:"",
+    confirmPassword:""
+  })
+  const handleInputChange = (e) => {
+    
+    setSignupData({
+      ...SignupData,
+      [e.target.name]: e.target.value
+    });
+   
+  };
   
 
   return (<div className='justify-center items-center flex p-6 min-h-screen'>
@@ -15,11 +30,13 @@ const Signup = () => {
   <input
     type="text"
     required
+    name='name'
     placeholder="Name"
     pattern="[A-Za-z][A-Za-z0-9\-]*"
     minLength="3"
     maxLength="30"
     title="Only letters, numbers or dash"
+    onChange={handleInputChange}
   />
     </label>
   {/* Username */}
@@ -28,11 +45,13 @@ const Signup = () => {
   <input
     type="text"
     required
+    name='username'
     placeholder="Username"
     pattern="[A-Za-z][A-Za-z0-9\-]*"
     minLength="3"
     maxLength="30"
     title="Only letters, numbers or dash"
+    onChange={handleInputChange}
   />
     </label>
 
@@ -42,11 +61,13 @@ const Signup = () => {
   <input
     type="email"
     required
+    name='email'
     placeholder="Email"
     pattern="[A-Za-z][A-Za-z0-9\-]*"
     minLength="3"
     maxLength="30"
     title="Only letters, numbers or dash"
+    onChange={handleInputChange}
   />
     </label>
     
@@ -56,10 +77,12 @@ const Signup = () => {
   <input
     type="password"
     required
+    name='password'
     placeholder="Password"
     minLength="8"
     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
     title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
+    onChange={handleInputChange}
   />
 </label>
 {/* Confirm Password */}
@@ -68,10 +91,12 @@ const Signup = () => {
   <input
     type="password"
     required
+    name='confirmpassword'
     placeholder="Confirm Password"
     minLength="8"
     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
     title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
+    onChange={handleInputChange}
   />
 </label>
 

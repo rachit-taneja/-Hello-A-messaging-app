@@ -13,11 +13,7 @@ const Login = () => {
       ...LoginData,
       [e.target.name]: e.target.value
     });
-    // const { name, value } = e.target;
-    // setLoginData(prevState => ({
-    //   ...prevState,
-    //   [name]: value
-    // }));
+   
   };
 
   return (<div className='justify-center items-center flex p-6 min-h-screen '>
