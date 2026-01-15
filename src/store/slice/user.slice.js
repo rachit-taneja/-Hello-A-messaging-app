@@ -1,19 +1,30 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { fetchUserThunk } from './user.thunk'
 
-const initialState = {
-  value: 0,
-}
-
-export const userslice = createSlice({
+export const userslice = createSlice
+(    {
   
     name: 'user',
+    initialState: {isauthenticated: false},
 })
-reducer: (state = initialState, action) => {
-    switch (action.type) {
-      default:
-        return state
-    }
-    }
-export const {  } = userslice.actions
+// reducer: (state = initialState, action) => {
+//     switch (action.type) {
+//       default:
+//         return state
+//     }
+//     }
 
-export default userslice.reducer
+    extraReducers: (builder) => {
+       builder.addCase(fetchUserThunk.pending, (state,action) => {
+           console.log("fetching user pending...");
+       });
+       builder.addCase(fetchUserThunk.fulfilled, (state,action) => {
+           console.log("fetching user fulfilled...");
+       });
+       builder.addCase(fetchUserThunk.rejected, (state,action) => {
+           console.log("fetching user rejected...");
+       });
+    }
+export const {  } = userslice.actions;
+
+export default userslice.reducer;
