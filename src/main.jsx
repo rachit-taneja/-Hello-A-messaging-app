@@ -10,7 +10,7 @@ import Home from './components/home/Home.jsx'
 // import { Provider } from 'react-redux'
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/home',
     element: <Home />
   },
   {

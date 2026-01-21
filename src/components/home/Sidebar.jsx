@@ -8,7 +8,8 @@ const Sidebar = () => {
     <div className="max-w-[21em] w-full h-screen flex flex-col bg-slate-600">
       {/* Header */}
       <div className="p-4 flex justify-between items-center">
-        <h1 className="text-3xl text-black"> Gup Shup </h1>
+        <h1 className="text-3xl text-orange-500"> Gup Shup </h1>
+
         <div className="avatar">
           <div className="w-10 rounded-full">
             <img src="/public/assets/LOGO.png" />

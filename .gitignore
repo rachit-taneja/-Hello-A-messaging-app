@@ -23,3 +23,5 @@ tailwind.config.js
 *.njsproj
 *.sln
 *.sw?
+backend/package-lock.json
+backend/package.json
