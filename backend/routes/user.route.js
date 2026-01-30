@@ -1,1 +1,3 @@
-import login from "../controllers/user.controller.js";
+app.get('/',(req,res,next )=>{
+    res.send('Hello, World!');
+});

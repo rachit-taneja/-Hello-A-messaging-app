@@ -7,7 +7,7 @@ export const userslice = createSlice
     name: 'user',
     initialState: {isauthenticated: false},
 })
-// reducer: (state = initialState, action) => {
+// reducer: (state = initialState, action) => { 
 //     switch (action.type) {
 //       default:
 //         return state
